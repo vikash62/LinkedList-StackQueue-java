@@ -7,9 +7,13 @@ public class LinkedListRunner {
         // 10 ==>20==>30==>40==>50
         LinkedList linkedList = new LinkedList();      
 
-        linkedList.addLast(56);
-        linkedList.addLast(30);
-        linkedList.addLast(70);
+//        linkedList.addLast(56);
+//        linkedList.addLast(30);
+//        linkedList.addLast(70);
+
+        linkedList.addFirst(70);
+        linkedList.addFirst(30);
+        linkedList.addFirst(56);
        
         linkedList.display();
         
