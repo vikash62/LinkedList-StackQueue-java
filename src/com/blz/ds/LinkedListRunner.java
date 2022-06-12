@@ -28,7 +28,7 @@ public class LinkedListRunner {
       
         linkedList.deleteLast();
         linkedList.display();
-    
+        linkedList.search(30); 
        
 
     }
