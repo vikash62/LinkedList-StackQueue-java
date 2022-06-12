@@ -23,6 +23,14 @@ public class LinkedListRunner {
         linkedList.deleteFirst();
         linkedList.display();
        
+        
+      linkedList.addLast(56);
+      linkedList.addLast(30);
+      linkedList.addLast(70);
+      linkedList.display();
+      
+        linkedList.deleteLast();
+        linkedList.display();
     
        
 
