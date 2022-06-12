@@ -20,7 +20,9 @@ public class LinkedListRunner {
         linkedList.insertAtSpecificIndex(1, 30);
         linkedList.display();
        
-     
+        linkedList.deleteFirst();
+        linkedList.display();
+       
     
        
 

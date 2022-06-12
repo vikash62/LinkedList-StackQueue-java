@@ -124,5 +124,19 @@ public class LinkedList {
 
         }
 
-    }     
+    }    
+
+    public void deleteFirst() {
+        if (head == null)
+            System.out.println("No elements to delete...");
+        else if (head.next == null)
+            head = null;
+        else {
+
+            Node temp = head.next;
+            head = temp;
+
+        }
+    }
+
 }
