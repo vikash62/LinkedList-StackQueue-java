@@ -10,6 +10,13 @@ public static void main(String[] args) {
 	    Stack.push(30);
 	    Stack.push(70);
 	    Stack.display();
+	    
+	    Stack.pop();
+	    Stack.display();
+	    Stack.pop();
+	    Stack.display();
+	    Stack.pop();
+	    Stack.display();
 }
 
 }
