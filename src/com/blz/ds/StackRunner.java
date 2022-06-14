@@ -2,24 +2,14 @@ package com.blz.ds;
 //Stack Runner to test Stack
 
 
-public class Stack {
-
-LinkedList list = new LinkedList();
-
- public void push(Object data)
- {
-     list.addLast(data);
- }
-
- public void pop()
- {
-     list.deleteLast();
- }
-
- public void display()
- {
-     list.display();
- }
-
+public class StackRunner {
+public static void main(String[] args) {
+	
+	    Stack Stack = new Stack();
+	    Stack.push(56);
+	    Stack.push(30);
+	    Stack.push(70);
+	    Stack.display();
+}
 
 }
