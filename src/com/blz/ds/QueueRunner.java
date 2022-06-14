@@ -12,7 +12,14 @@ public class QueueRunner {
         queue.enQueue(30);
         queue.enQueue(70);
         queue.display();
-      
+        queue.deQueue();
+        queue.display();
+        queue.deQueue();
+        queue.display();
+        queue.deQueue();
+        queue.display();
+
+        queue.deQueue();
 
     }
 

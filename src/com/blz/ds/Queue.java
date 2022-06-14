@@ -10,7 +10,10 @@ public class Queue {
         list.addLast(data);
     }
    
-  
+    public void deQueue()
+    {
+        list.deleteFirst();
+    }
    
     public void display()
     {
