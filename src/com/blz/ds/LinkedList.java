@@ -2,6 +2,7 @@ package com.blz.ds;
 
 
 
+
 public class LinkedList {
 
     Node head; // null
@@ -15,19 +16,6 @@ public class LinkedList {
         }
 
     }
-    public void addFirst(Object data) {
-        Node newNode = new Node(data);
-
-        if (head == null)
-            head = newNode;
-        else {
-            Node temp = head;
-            head = newNode;
-            head.next = temp;
-
-        }
-    }
-    
 
     public void insertAtSpecificIndex(int userIndex, Object data) {
 
@@ -70,6 +58,70 @@ public class LinkedList {
 
     }
 
+    public void search(Object searchData) {
+        if (head.data == searchData)
+            System.out.println(searchData + " is Found");
+        else {
+            Node temp = head;
+
+            boolean isFound = false;
+
+            while (temp != null) {
+                if (temp.data == searchData) {
+                    isFound = true;
+                    break;
+                }
+
+                temp = temp.next;
+            }
+
+            if (isFound == true)
+                System.out.println(searchData + " is Found");
+            else
+                System.out.println(searchData + " is not found..");
+        }
+
+    }
+
+    public int size() {
+        int count = 0; // No data 1 element
+
+        Node temp = head;
+
+        while (temp != null) {
+            count++;
+            temp = temp.next;
+        }
+
+        return count;
+
+    }
+
+    public void deleteFirst() {
+        if (head == null)
+            System.out.println("No elements to delete...");
+        else if (head.next == null)
+            head = null;
+        else {
+
+            Node temp = head.next;
+            head = temp;
+
+        }
+    }
+
+    public void addFirst(Object data) {
+        Node newNode = new Node(data);
+
+        if (head == null)
+            head = newNode;
+        else {
+            Node temp = head;
+            head = newNode;
+            head.next = temp;
+
+        }
+    }
 
     public void addLast(Object data) {
         Node newNode = new Node(data);
@@ -88,19 +140,29 @@ public class LinkedList {
         }
 
     }
-    public int size() {
-        int count = 0; // No data 1 element
 
-        Node temp = head;
+    public void deleteLast() {
 
-        while (temp != null) {
-            count++;
-            temp = temp.next;
+        if (head == null)
+            System.out.println("No elements to delete..");
+        else if (head.next == null)
+            head = null;
+        else {
+            Node temp = head;
+
+            while (temp.next.next != null) {
+                temp = temp.next;
+            }
+
+            temp.next = null;
         }
 
-        return count;
+        /*
+         * list may be empty head=> [ 1 | null ] Not empty Only one element
+         */
 
     }
+
     public void display() {
         /*
          * []==> No elements to display.. head==> temp=>[10 | null] [10 | ref20]
@@ -124,67 +186,6 @@ public class LinkedList {
 
         }
 
-    }    
-
-    public void deleteFirst() {
-        if (head == null)
-            System.out.println("No elements to delete...");
-        else if (head.next == null)
-            head = null;
-        else {
-
-            Node temp = head.next;
-            head = temp;
-
-        }
     }
-    public void deleteLast() {
 
-        if (head == null)
-            System.out.println("No elements to delete..");
-        else if (head.next == null)
-            head = null;
-        else {
-            Node temp = head;
-
-            while (temp.next.next != null) {
-                temp = temp.next;
-            }
-
-            temp.next = null;
-        }
-
-        /*
-         * list may be empty head=> [ 1 | null ] Not empty Only one element
-         */
-
-    }
-    public void search(Object searchData)
-    {
-            if(head.data == searchData)
-                System.out.println(searchData + " is Found");
-            else
-            {
-                   Node temp=head;
-                   
-                   boolean isFound=false;
-                   
-                   while(temp!=null)
-                   {
-                       if(temp.data == searchData)
-                       {
-                           isFound = true;
-                              break;
-                       }
-                       
-                       temp=temp.next;
-                   }
-                   
-                   if(isFound == true)
-                       System.out.println(searchData+ " is Found");
-                   else
-                      System.out.println(searchData+" is not found..");
-            }
-           
-    }
 }
